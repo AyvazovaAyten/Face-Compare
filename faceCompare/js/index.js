@@ -3,10 +3,7 @@ $(document).ready(function () {
     const dropArea = document.getElementsByClassName('image-drop-area');
     const checkBtn = document.getElementById('checkButton');
     const result = document.querySelector('.result');
-
-    const BASE_URL = 'http://127.0.0.1:5000';
-
-
+    let resultText = document.getElementById('resultText');
 
     function readURL(input) {
         if (input.files && input.files[0]) {
@@ -15,7 +12,7 @@ $(document).ready(function () {
                 result.classList.remove('show');
                 result.classList.add('hide');
             }
-
+            resultText.innerText = "";
             let el = input.parentNode;
 
             var reader = new FileReader();
@@ -39,7 +36,6 @@ $(document).ready(function () {
     checkBtn.addEventListener('click', () => {
         let firstImage = document.getElementById('firstImage');
         let secondImage = document.getElementById('secondImage');
-        let resultText = document.getElementById('resultText');
         result.classList.add('show');
         result.classList.remove('hide');
 
@@ -51,29 +47,31 @@ $(document).ready(function () {
         let file1 = document.getElementById('file1').value;
         let file2 = document.getElementById('file2').value;
 
-        let formData = new FormData();
-        formData.append("img1_base64", file1);
-        formData.append("img2_base64", file2);
-
         $.ajax({
-            url: `http://127.0.0.1:5000/compare`,
+            url: `http://45.80.175.27:5000/compare`,
             type: "POST",
-            dataType: "json",
+            crossDomain: true,
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify({
-                img1_base64: file1,
-                img2_base64: file2
+                'img1_base64': file1,
+                'img2_base64': file2
             }),
-
             cache: false,
             success: (res) => {
-                console.log(res);
-                resultText.innerText = "Success";
-                resultText.classList.add('green');
-                if (resultText.classList.contains('red')) {
-                    resultText.classList.remove('red');
+                if (res.includes('True')) {
+                    if (resultText.classList.contains('red')) {
+                        resultText.classList.remove('red');
+                    }
+                    resultText.classList.add('green');
+                    resultText.innerText = "EYNİ ADAMDIR";
+                } else {
+                    if (resultText.classList.contains('green')) {
+                        resultText.classList.remove('green');
+                    }
+                    resultText.classList.add('red');
+                    resultText.innerText = "FƏRQLİ ADAMDIR";
                 }
-                resultText.classList.add('green');
+
             },
             error: (err) => {
                 console.log(err);
