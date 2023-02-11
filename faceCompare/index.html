@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b85dac41f2.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="imageCheckSection">
+        <div class="images-container">
+            <div class="images">
+                <div class="image-area">
+                    <div class="image-drop-area">
+                        <p>Only pics allowed ( .png, .jpg, .jpeg )</p>
+                            <div class="container">
+                                <div class="avatar-upload">
+                                    <div class="avatar-edit">
+                                        <input type='file' id="firstImage" class="imageUpload" accept=".png, .jpg, .jpeg" />
+                                        <label for="firstImage"></label>
+                                    </div>
+                                    <div class="avatar-preview">
+                                        <div class="imagePreview" style="background-image: url(./966-9665317_placeholder-image-person-jpg.png);">
+                                        </div>
+                                        <input type="hidden" id="file1" class="hidden" value="">
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="image-area">
+                    <div class="image-drop-area">
+                            <p>Only pics allowed ( .png, .jpg, .jpeg )</p>
+                            <div class="container">
+                                <div class="avatar-upload">
+                                    <div class="avatar-edit">
+                                        <input type="file" id="secondImage" class="imageUpload" accept=".png, .jpg, .jpeg" />
+                                        <label for="secondImage"></label>
+                                    </div>
+                                    <div class="avatar-preview">
+                                        <div class="imagePreview" style="background-image: url(./966-9665317_placeholder-image-person-jpg.png);">
+                                        </div>
+                                        <input type="hidden" id="file2" class="hidden" value="">
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="check-button" id="checkButton">Check</button>
+        </div>
+        <div class="result-container">
+            <div class="result hide">
+                <p id="resultText"></p>
+                <span></span>
+            </div>
+            <div class="result-icons">
+                <div class="centered hide" id="centered">
+                    <div class="person-icon left_collapsed" id="leftHuman">O</div>
+                    <div class="person-icon right_collapsed" id="rightHuman">O</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
