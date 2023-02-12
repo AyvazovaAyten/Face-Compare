@@ -154,7 +154,6 @@ $(document).ready(function () {
             url: `http://45.80.175.27:5000/direction`,
             type: "POST",
             crossDomain: true,
-            timeout:150000,
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify({
                 'img_base64': file1
@@ -169,7 +168,7 @@ $(document).ready(function () {
             error: (err) => {
                 console.log('error');
                 console.log(err);
-                firstDirectionResult.innerText = err;
+                firstDirectionResult.innerText = "ERROR";
                 
             }
         });
@@ -180,6 +179,7 @@ $(document).ready(function () {
     secondDirectionBtn.addEventListener('click', () => {
         let secondImage = document.getElementById('secondImage');
         secondDirectionResult.innerText = "";
+        secondDirectionBtn.disabled = true;
 
         if (!secondImage.files.length) {
             secondDirectionResult.innerText = "Zəhmət olmasa, şəkil yükləyin";
@@ -188,7 +188,29 @@ $(document).ready(function () {
 
         let file2 = document.getElementById('file2').value;
 
-        secondDirectionResult.innerText = getDirection(file2)();
+        $.ajax({
+            url: `http://45.80.175.27:5000/direction`,
+            type: "POST",
+            crossDomain: true,
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({
+                'img_base64': file2
+            }),
+            cache: false,
+            success: (res) => {
+                console.log('success');
+                console.log(res);
+                secondDirectionResult.innerText = res;
+
+            },
+            error: (err) => {
+                console.log('error');
+                console.log(err);
+                secondDirectionResult.innerText = "ERROR";
+                
+            }
+        });
+        secondDirectionBtn.disabled = false;
 
     });
 
