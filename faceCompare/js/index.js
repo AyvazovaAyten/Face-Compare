@@ -4,6 +4,10 @@ $(document).ready(function () {
     const checkBtn = document.getElementById('checkButton');
     const result = document.querySelector('.result');
     let resultText = document.getElementById('resultText');
+    const firstDirectionBtn = document.getElementById('first-direction');
+    const secondDirectionBtn = document.getElementById('second-direction');
+    const firstDirectionResult = document.getElementById('first-direction-result');
+    const secondDirectionResult = document.getElementById('second-direction-result');
 
     function readURL(input) {
         if (input.files && input.files[0]) {
@@ -14,6 +18,9 @@ $(document).ready(function () {
             }
             resultText.innerText = "";
             let el = input.parentNode;
+            let directionResult = el.parentNode.parentNode.parentNode.
+            querySelector('.direction-container').querySelector('.direction-result');
+            directionResult.querySelector('.direction-result_text').innerText="";
 
             var reader = new FileReader();
             reader.onload = function (e) {
@@ -40,7 +47,7 @@ $(document).ready(function () {
         result.classList.remove('hide');
 
         if (!firstImage.files.length || !secondImage.files.length) {
-            resultText.innerText = "Please upload images";
+            resultText.innerText = "Zəhmət olmasa, şəkilləri yükləyin";
             return false;
         }
 
@@ -105,63 +112,85 @@ $(document).ready(function () {
 
     });
 
-    // const preventDefaultAndPropagation = (e) => {
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    // };
 
-    // ['dragenter', 'dragleave', 'drop', 'dragover'].forEach(e => {
-    //     Array.from(dropArea).forEach(el => el.addEventListener(e, preventDefaultAndPropagation));
-    // });
+    let getDirection = function (base64) {
+        $.ajax({
+            url: `http://45.80.175.27:5000/direction`,
+            type: "POST",
+            crossDomain: true,
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({
+                'img_base64': base64
+            }),
+            cache: false,
+            success: (res) => {
+                console.log('succes')
+                return res;
 
-    // ['dragenter', 'dragover'].forEach(e => {
-    //     Array.from(dropArea).forEach(el => {
-    //         el.addEventListener(e, () => {
-    //             el.classList.add('active');
-    //         });
-    //     });
-    // });
-
-    // ['dragleave', 'drop'].forEach(e => {
-    //     Array.from(dropArea).forEach(el => {
-    //         el.addEventListener(e, () => {
-    //             el.classList.remove('active');
-    //         });
-    //     });
-    // });
-
-
-    // Array.from(dropArea).forEach(el => el.addEventListener('drop', event => {
-    //     dowlandingfiles = 0;
-    //     const dataTransfer = event.dataTransfer;
-    //     const files = dataTransfer.files
-    //     const filesAsArray = [...files];
-
-    //     filesAsArray.forEach(previewFile);
-    //     filesAsArray.forEach(uploadFile);
-    // })
-    // );
+            },
+            error: (err) => {
+                console.log('error')
+                return err;
+                
+            }
+        });
+    };
 
 
-    // const previewFile = (file) => {
-    //     const fileReader = new FileReader();
 
-    //     fileReader.readAsDataURL(file);
+    firstDirectionBtn.addEventListener('click', () => {
+        firstDirectionBtn.disabled = true;
+        let firstImage = document.getElementById('firstImage');
+        firstDirectionResult.innerText = "";
 
-    //     fileReader.onloadend = function (e) {
-    //         // let el = console.log(e.dropArea);
-    //         // let preview = el.parentNode.querySelector('.imagePreview');
-    //         // $(preview).css('background-image', 'url(' + e.target.result + ')');
-    //         // $(preview).hide();
-    //         // $(preview).fadeIn(650);
+        if (!firstImage.files.length) {
+            firstDirectionResult.innerText = "Zəhmət olmasa, şəkil yükləyin";
+            return false;
+        }
 
-    //     }
-    // };
+        let file1 = document.getElementById('file1').value;
 
-    // const uploadFile = (file) => {
-    //     const formData = new FormData();
-    //     formData.append('file', file);
-    // };
+        $.ajax({
+            url: `http://45.80.175.27:5000/direction`,
+            type: "POST",
+            crossDomain: true,
+            timeout:150000,
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({
+                'img_base64': file1
+            }),
+            cache: false,
+            success: (res) => {
+                console.log('success');
+                console.log(res);
+                firstDirectionResult.innerText = res;
+
+            },
+            error: (err) => {
+                console.log('error');
+                console.log(err);
+                firstDirectionResult.innerText = err;
+                
+            }
+        });
+        firstDirectionBtn.disabled = false;
+
+    });
+
+    secondDirectionBtn.addEventListener('click', () => {
+        let secondImage = document.getElementById('secondImage');
+        secondDirectionResult.innerText = "";
+
+        if (!secondImage.files.length) {
+            secondDirectionResult.innerText = "Zəhmət olmasa, şəkil yükləyin";
+            return false;
+        }
+
+        let file2 = document.getElementById('file2').value;
+
+        secondDirectionResult.innerText = getDirection(file2)();
+
+    });
 
 
 });
