@@ -1,0 +1,363 @@
+{
+  "common": {
+    "capital": {
+      "change": "Dəyiş",
+      "create": "Yarat",
+      "clone": "Klonla",
+      "copy": "Kopyala",
+      "test": "Yoxla",
+      "cancel": "İmtina et",
+      "close": "Bağla",
+      "save": "Yadda saxla",
+      "yes": "Bəli",
+      "no": "Xeyr",
+      "add": "Əlavə et",
+      "rename": "Adını dəyiş",
+      "edit": "Redaktə et",
+      "delete": "Sil",
+      "ok": "Ok",
+      "images": "şəkillər",
+      "submit": "Təsdiqlə"
+    },
+    "name": "Ad",
+    "email": "Email",
+    "type": "Tip",
+    "create": "Yarat",
+    "unknown_error": "Xəta baş verdi",
+    "input_lengh_err": "Maksimum 50 simvol istifadə oluna bilər"
+  },
+  "login": {
+    "email": "E-mail",
+    "email_placeholder": "E-mail daxil et",
+    "password_placeholder": "Şifrə daxil et",
+    "password": "Şifrə",
+    "no_account": "Hesab artıq mövcuddur?",
+    "sign_up": "Qeydiyyat",
+    "create_account": "Hesab yarat",
+    "email_hint": "Email formatı düzgün deyil",
+    "password_hint": "Şifrə mütləqdir",
+    "login": "Daxil ol",
+    "password_recovery": "Şifrəni unutmusunuz?"
+  },
+  "registration": {
+    "title": "Qeydiyyat",
+    "first_name": "Ad",
+    "last_name": "Soyad",
+    "email": "E-mail",
+    "password": "Şifrə",
+    "confirm_password": "Şifrəni təsdiqləyin",
+    "password_restriction": "Minimum 8 simvol",
+    "password_dont_match": "Şifrələr uyğun deyil",
+    "name_restriction": "Ad mütləq xanadır",
+    "last_name_restriction": "Soyad mütləq xanadır",
+    "email_hint": "Email formatı düzgün olmalıdır",
+    "login": "Daxil ol",
+    "have_account": "Hesab artıq mövcuddur?",
+    "sign_up": "Qeydiyyat",
+    "statistics": "Anonim statistika göndərməyə icazə ver",
+    "more_info": "Əlavə informasiya",
+    "name_placeholder": "Ad daxil edin",
+    "password_placeholder": "Şifrə daxil edin",
+    "email_placeholder": "E-mail daxil edin",
+    "confirm_password_placeholder": "Şifrəni təsdiqləyin"
+  },
+  "change_password": {
+    "old_password": "Köhnə şifrə",
+    "new_password": "Yeni şifrə",
+    "enter_password": "Şifrə daxil edin",
+    "repeate_password": "Şifrəni təkrarlayın"
+  },
+  "toolbar": {
+    "logout": "Çıxış",
+    "change_password": "Şifrəni dəyiş",
+    "user_info": "Profili dəyiş",
+    "user_info_change": "Profil adını dəyiş",
+    "user_avatar_info": "İstifadəçi avatarı",
+    "logo": "logo",
+    "signup": "Qeydiyyat"
+  },
+  "applications": {
+    "build": "Build version",
+    "caption": "Tətbiqlər cədvəli",
+    "title": "Tətbiqlər",
+    "placeholder": "Tətbiqin adını daxil edin",
+    "first_steps_title": "Tətbiqlər",
+    "name": "Tətbiqin adı",
+    "owner": "Owner",
+    "no_application_msg": "Sizin mövcud tətbiqiniz yoxdur. Yeni tətbiq yaradın və ya mövcud olana əlavə etmək üçün administrator ilə əlaqə saxlayın.",
+    "first_steps_info": "İstifadə üçün ilk addım tətbiq yaratmaqdır.",
+    "create": {
+      "title": "Tətbiq yarat",
+      "button": "Yenisini yarat",
+      "add_button": "Tətbiq yarat"
+    },
+    "error_msg": "Bu adda tətbiq artıq mövcuddur.",
+    "header": {
+      "title": "Tətbiq",
+      "edit": "Redaktə et",
+      "delete": "Sil",
+      "owner": "Owner",
+      "delete_dialog": {
+        "title": "Tətbiqi sil",
+        "warn_information": "bütün əlaqəli data silinəcək",
+        "confirmation_question": "Əminsiniz"
+      },
+      "edit_dialog": {
+        "title": "Tətbiqi redaktə et",
+        "rename": "Adını dəyiş",
+        "name": "Ad"
+      }
+    },
+    "search": {
+      "title": "Tətbiqi axtar"
+    }
+  },
+  "recovery": {
+    "password_recovery": "Şifrəni unutmusunuz?",
+    "label": "Email daxil edin",
+    "email_check": "Email adresinizi yoxlayın və instuksiyaları icra edin"
+  },
+  "models": {
+    "caption": "Üz kolleksiyaları cədvəli",
+    "title": "Modellər",
+    "name": "Ad",
+    "type": "Növ",
+    "api_key": "API açarı",
+    "header": "Servis",
+    "actions": "Actions",
+    "error_msg": "Bu adlı model artıq mövcuddur",
+    "create_model_info": "Üz tanıma servislərindən birini yarat: Üz tanıma, Üz müəyyənetmə or Üz verifikasiyası.",
+    "info_about_service": "Servislər sizə müxtəlif üz tanıma funksiyaları təqdim edir. Hər bir servisdə API açarı var. Zəhmət olmasa, biznes ehtiyaclarınıza uyğun olaraq xidmət növünü seçin.",
+    "model_name_label": "Servisi necə adlandırmaq istəyirsiniz ?",
+    "model_type_label": "Servisin növü hansıdır?",
+    "model_name": "Servis adı",
+    "create_dialog": {
+      "create": "Servis yarat ",
+      "title": "Servislər",
+      "name": "Ad"
+    },
+    "select_menu": {
+      "edit": "Radaktə et",
+      "clone": "Klonla",
+      "delete": "Sil",
+      "test": "Yoxla"
+    },
+    "edit_dialog": {
+      "title": "Modeli redaktə et",
+      "name": "Ad",
+      "rename": "Adını dəyiş"
+    },
+    "delete_dialog": {
+      "title": "Modeli sil",
+      "warn_information": "bütün əlaqəli data silinəcək",
+      "confirmation_question": "{{ entityType }} modelini silməyə əminsiniz? Təsdiq üçün modelin adını- {{ entityType }} yazın."
+    },
+    "search": {
+      "title": "Servisi axtar"
+    },
+    "mange_collection": "Kolleksiyanı idarə et",
+    "statistics_data_msg": "Heç bir məlumat yoxdur"
+  },
+  "users": {
+    "caption": "İstifadəçilər cədvəli",
+    "title": "İstifadəçilər",
+    "user": "İstifadəçi",
+    "delete": "İstifadəçini sil",
+    "role": "Rol",
+    "user_role": "İstifadəçi rolu",
+    "confirmation_dialog": {
+      "delete_confirmation_question": "İstifadəçini silmək istədiyinizdən əminsiniz",
+      "warning_msg_owner": "{{ user }} adlı istifadəçi {{ applicationNames }} tətbiqlərinin sahibidir. İstifadəçini silsəniz, tətbiqlərin sahibi siz olacaqsınız.",
+      "warning_msg_admin": "{{ user }} adlı istifadəçi {{ applicationNames }} tətbiqlərinin sahibidir. İstifadəçini silsəniz, tətbiqin sahibi qlobal OWNER olacaq."
+    },
+    "search": {
+      "org_title": "İstifadəçini axtar",
+      "app_title": "İstifadəçini axtar",
+      "no_results": "Nəticə tapılmadı"
+    },
+    "create": {
+      "add_button": "İstifadəçi əlavə et"
+    },
+    "manage": {
+      "role_update": "Rolu yenilə",
+      "role_update_description": "OWNER rolunu digər istifadəçiyə verməkdən əminsiniz? ",
+      "manage_users_title": "İstifadəçilərin idarəsi",
+      "warning_txt": "İlkdən başqa bütün qeydiyyatdan keçmiş istifadəçilər heç bir tətbiq görməyəcək. Onlara giriş vermək üçün onları fərdi proqrama əlavə etməlisiniz. Qlobal OWNER və Qlobal Administratorların bütün proqramlara tam girişi var.",
+      "no_data": "Uyğunluq tapılmadı",
+      "search_label": "İstifadəçiləri axtar",
+      "user_name": "İstifadəçi adı",
+      "users": "Adlar",
+      "emails": "Email adreslər",
+      "roles": "Rollar",
+      "save": "Yadda saxla"
+    }
+  },
+  "org_users": {
+    "confirm_dialog": {
+      "title": "Yükləməni dayandır",
+      "confirmation_question": "Arxa planda şəkilləri yükləyirsiniz. Bu səhifəni tərk etsəniz, yükləmə ləğv ediləcək. Səhifəni tərk etmək istəyirsiniz?"
+    },
+    "delete_dialog": {
+      "title": "{{type}} Sil",
+      "confirmation_question": "{{name}} {{lastName}} adlı istifadəçini proyektdən silmək istədiyinizə əminsiniz?",
+      "warn_information": "{{firstName}} {{lastName}} adlı istifadəçi tətbiqlərin sahibidir: ",
+      "warn_hint_anyway": "İstənilən halda onu silə bilərsiniz.",
+      "warn_hint_owner": "Bu halda siz sahib olacaqsınız.",
+      "warn_hint_new_owner": "Bu halda bu tətbiqlərin sahibi bu istifadəçi olacaq: ",
+      "warn_hint_replace_to_owner": "Bu halda bu tətbiqlərin sahibi qlobal OWNER olacaq",
+      "default_confirmation": "{{type}} {{name}} və bütün əlaqəli məlumatlar silinəcək.\nƏminsiniz?"
+    },
+    "add_users_info": " İndi siz yeganə istifadəçisiniz. Digər istifadəçilər qeydiyyatdan keçdikdən sonra bu siyahıda görünəcəklər. Siz sahib kimi onlara sistem və ya fərdi proqramları idarə etmək hüququnu verə biləcəksiniz.",
+    "edit_user_info": "İstifadəçinin məlumatları yeniləndi"
+  },
+  "side_menu": {
+    "dashboard": "Dashboard",
+    "face_collection": "Üzlər kolleksiyası",
+    "test": "Yoxla"
+  },
+  "model_info": {
+    "copy_key": "Api açarını kopyala",
+    "service_info": "Servis haqqında",
+    "created_on": "Yaradılma tarixi",
+    "service_name": "Servisin adı",
+    "service_type": "Servisin növü",
+    "total_images": "Ümumi şəkillər",
+    "total_faces": "Ümumi üzlər"
+  },
+  "app_users": {
+    "add_users_info": "Qeydiyyatdan keçmiş bütün istifadəçilər, ilk istisna olmaqla tətbiqləri görməyəcəklər. Onlara giriş vermək üçün onları fərdi tətbiqə əlavə etməlisiniz. Global Owner and Global Administratorların bütün tətbiqlərə tam girişi var.",
+    "add_user_dialog": {
+      "email_hint": "Email mütləqdir"
+    },
+    "delete_dialog": {
+      "title": "İstifadəçini sil",
+      "confirmation_question": "{{name}} adlı istifadəçini {{application}} tətbiqindən silməyə əminsiniz?"
+    }
+  },
+  "breadcrumbs": {
+    "home": "Ana səhifə"
+  },
+  "dnd": {
+    "title": "Bura klikləyin və ya faylı bura atın",
+    "label": "Qəbul olunan şəkil tipləri: jpeg, jpg, png, webp \nMax images size =",
+    "test": "Modeli yoxla",
+    "add": "Modelə əlavə et",
+    "train": "Modeli öyrət",
+    "recognize": "Üzü tanı",
+    "image": "image",
+    "target": "hədəflənən şəkil",
+    "source": "mənbə şəkil"
+  },
+  "test_model": {
+    "title": "Test Model",
+    "request": "Request",
+    "response": "Response"
+  },
+  "demo": {
+    "title": "Demo",
+    "link": "Try Demo"
+  },
+  "face_recognition_container": {
+    "file_size_error": "Fayl ölçüsü çox böyükdür",
+    "file_unavailable_extension": "{{filename}} faylının formatı uyğun deyil"
+  },
+  "face_recognition": {
+    "no_recognized": "Heç bir üz tanınmadı",
+    "no_faces_in_collection": "Üz kolleksiyasına heç bir üz yüklənməyib"
+  },
+  "auth": {
+    "incorrect_credentials": "E-mail və ya şifrə yanlışdır.",
+    "already_in_use": "Bu e-mail artıq istifadə olunur.",
+    "new_account_confirm_email": "Siz yeni hesab yaratmısınız, zəhmət olmasa maili təsdiqləyin",
+    "new_account_login": "Siz uğurla yeni hesab yaratdınız",
+    "change_password_success": "Şifrə uğurla dəyişdirildi"
+  },
+  "create_application_wizard": {
+    "application": {
+      "title": "Öz tətbiqini yarat",
+      "info_about_application": "Tətbiq üz tanıma xidmətlərinizi yarada və idarə edə biləcəyiniz yerdir. Bu, onların digər istifadəçilərdən görünməsini məhdudlaşdırmağa imkan verir",
+      "application_name_question": "Tətbiqi necə adlandırmaq istəyirsiniz?",
+      "application_name": "Tətbiqin adı",
+      "error_msg": "Tətbiqin adı unikaldır ",
+      "next": "Növbəti"
+    },
+    "service": {
+      "title": "Servis əlavə et",
+      "info_about_service": "Servislər sizə müxtəlif üz tanıma funksiyaları təqdim edir. Hər bir serisdə sorğu üçün lazımi API açarı var. Zəhmət olmasa, biznes ehtiyaclarınıza uyğun xidmət növünü seçin.",
+      "service_name_question": "Servisi necə adlandırmaq istəyirsiniz?",
+      "service_name": "Servisin adı",
+      "service_type": "Bu nə servisidir?",
+      "create_btn": "Servis yarat",
+      "recognition": "Tanıma",
+      "detection": "Müəyyən etmə",
+      "verification": "Verifikasiya",
+      "recognition_type": "Üz tanınması üçün üz tanıma xidmətindən istifadə edilir. Siz ilk öncə məlum üzləri üzlər kolleksiyasına yükləməlisiniz və sonra onların arasında naməlum simaları tanımalısınız.",
+      "detection_type": "Şəkildəki bütün üzləri aşkar etmək üçün üz müəyyən etmə xidmətindən istifadə edilir. O, üzləri tanımır, sadəcə şəkildə onları tapır.",
+      "verification_type": "Verifikasiya xidmətindən şəxsin həmin şəxs olub-olmadığını yoxlamaq üçün istifadə olunur. Xidmət iki üzü müqayisə edir və onların oxşarlığını qaytarır."
+    }
+  },
+  "application_user_list": {
+    "invitation_sent": "{{userEmail}} adresinə dəvət göndərildi",
+    "required_msg": "Bu xana mütləqdir"
+  },
+  "manage_collection": {
+    "header": "Üzlər",
+    "error_msg": "Bu adda üz artıq mövcuddur",
+    "bulk_select": "Toplu seçim",
+    "cancel_select": "İmtina et",
+    "delete": "Sil",
+    "left_side": {
+      "add_subject": "Üz əlavə et",
+      "search": "Axtarış...",
+      "modal_title": "Üz",
+      "subject_name": "Adı",
+      "name": "Ad"
+    },
+    "right_side": {
+      "title": "Üzləri birləşdir",
+      "profile": "Şəxsi profil:",
+      "edit_subject": "Üz",
+      "delete_subject": "Üz",
+      "join_subjects": "Birləşdir",
+      "cancel_changes": "İmtina et",
+      "join_message": "Bu ad artıq mövcuddur.",
+      "examples": "Nümunələr:",
+      "selected_examples": "Nümunə seçin:",
+      "empty_message": "Göstərmək üçün hər hansı subyekt mövcud deyil. Birini seç/əlavə et.",
+      "control_button_delete_title": "Üzü sil",
+      "control_button_edit_title": "Üzü redaktə et",
+      "control_button_bulk-select_title": "Seçim rejiminə daxil olun",
+      "control_button_bulk-select-exit_title": "Seçim rejimindən çıxış edin",
+      "control_button_bulk-delete_title": "Seçilmişi sil",
+      "modal_bulk-delete_type": "Nümunələr",
+      "modal_bulk-delete_name": " item(s)",
+      "control_button_tooltip": "Yükləmə davam edir"
+    }
+  },
+  "Server_Status": {
+    "Admin": "Admin node",
+    "Api": "Api node",
+    "Core": "Core node",
+    "Loading": "loading ...",
+    "Title": "starting ..."
+  },
+  "month": {
+    "January": "Yanvar",
+    "February": "Fevral",
+    "March": "Mart",
+    "April": "Aprel",
+    "May": "May",
+    "June": "İyun",
+    "July": "İyul",
+    "August": "Avqust",
+    "September": "Sentyabr",
+    "October": "Oktyabr",
+    "November": "Noyabr",
+    "December": "Dekabr"
+  },
+  "tooltip": {
+    "upload_new_image": "Yeni şəkil yüklə",
+    "clear_image": "Nəticələri təmizlə",
+    "show_landmarks": "İşarələri göstər"
+  }
+}
